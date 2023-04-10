@@ -5,8 +5,8 @@ function authen() {
   var password = document.getElementById("password").value;
   password.type='text';
   if (
-    email == localStorage.getItem('user') &&
-    password == localStorage.getItem('pass')
+    email == qaifi&&
+    password == qaifi
   ) {
     window.location.assign("orders.html");
     alert("Login Successfully");
