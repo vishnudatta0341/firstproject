@@ -7,7 +7,7 @@ function authen() {
     email == localStorage.getItem(user) &&
     password == localStorage.getItem(pass)
   ) {
-    window.location.assign("orders.html");
+    window.location.assign("/orders.html");
     alert("Login Successfully");
   } else {
     alert("Please Enter Valid Credentials");
