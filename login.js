@@ -3,7 +3,6 @@ var y = localStorage.setItem("pass", "qaifi");
 function authen() {
   var email = document.getElementById("username").value;
   var password = document.getElementById("password").value;
-  password.type='text';
   if (
     email == localStorage.getItem('user') &&
     password == localStorage.getItem('pass')
