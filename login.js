@@ -4,8 +4,8 @@ function authen() {
   var email = document.getElementById("username").value;
   var password = document.getElementById("password").value;
   if (
-    email == localStorage.getItem(user) &&
-    password == localStorage.getItem(pass)
+    email == x.localStorage.getItem('user') &&
+    password == y.localStorage.getItem('pass')
   ) {
     window.location.assign("/orders.html");
     alert("Login Successfully");
