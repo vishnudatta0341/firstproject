@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kafene website</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0px;
+        margin: 0px;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(249, 251, 252);
+        box-shadow: 0px 4px 7px rgb(164, 157, 157);
+      }
+      .logospace {
+        display: flex;
+        padding-left: 5%;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lname {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        padding-left: 6%;
+      }
+      .navdiv ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2rem;
+        padding-left: 6rem;
+      }
+      ul li a {
+        text-decoration: none;
+        font-size: 1.13rem;
+        font-weight: 600;
+        color: black;
+      }
+      ul li {
+        list-style: none;
+      }
+      #nav3 a {
+        color: rgb(27, 167, 120);
+        border-bottom: 2px solid rgb(27, 167, 120);
+      }
+      .logout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 80px;
+        cursor: pointer;
+      }
+      .container{
+        width: 80%;
+        margin-left: 130px;
+        margin-top: 80px;
+      }
+      .inputbox{
+        border-bottom: 2px solid black;
+        float: left;
+      }
+      .inputbox input{
+        width: 30rem;
+        height: 1.5rem;
+        border-style: none;
+        border-radius: 2px;
+        outline: none;
+        background-color: rgb(245, 245, 245);
+      }
+      .button button{
+        width: 7rem;
+        height: 1.9rem;
+        background-color: rgb(19, 236, 163);
+        border-radius:5rem ;
+        border: none;
+        cursor: pointer;
+        margin-left: 50px;
+      }
+      table {
+        width: 100%;
+        height: auto;
+        float: right;
+        position: relative;
+        top: 45px;
+        gap: 0px;
+        border-spacing: 0px 5px;
+      }
+      th {
+   text-align: left;
+      }
+      td {
+        padding: 25px;
+        background-color: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <!--  creating navbar -->
+      <div class="logospace">
+        <!--  creating logo space -->
+        <div class="logo">
+          <!--  inserting logo -->
+          <img
+            src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png"
+            alt="logo"
+          />
+        </div>
+        <div class="lname">
+          <p>Kafene</p>
+          <!--  inserting name-->
+        </div>
+      </div>
+      <div class="navdiv">
+        <ul>
+          <li class="navitems" id="nav1"><a href="/orders.html">Orders</a></li>
+          <li class="navitems" id="nav2">
+            <a href="/products.html">Products</a>
+          </li>
+          <li class="navitems" id="nav3"><a href="/users.html">Users</a></li>
+        </ul>
+      </div>
+      <div class="logout" onclick="logout()">
+        <p>Logout</p>
+      </div>
+    </div>
+    <div class="container">
+      <h2>Users</h2>
+      <div class="inputbox"><input id="inputbox1" type="text" placeholder="    Search by Name"></div>
+      <div class="button"><button id="resetbutton" type="reset" onclick="reset()">Reset</button></div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>User Avatar</th>
+            <th>Full Name</th>
+            <th>DoB</th>
+            <th>Gender</th>
+            <th>Current Location</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+  
+        </tbody>
+      </table>
+    </div>
+    <script src="/users.js"></script>
+  </body>
+</html>

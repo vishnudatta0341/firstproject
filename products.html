@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kafene Website</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0px;
+        margin: 0px;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(249, 251, 252);
+        box-shadow: 0px 4px 7px rgb(164, 157, 157);
+      }
+      .logospace {
+        display: flex;
+        padding-left: 5%;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lname {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        padding-left: 6%;
+      }
+      .navdiv ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2rem;
+        padding-left: 6rem;
+      }
+      ul li a {
+        text-decoration: none;
+        font-size: 1.13rem;
+        font-weight: 600;
+        color: black;
+      }
+      ul li {
+        list-style: none;
+      }
+      #nav2 a {
+        color: rgb(27, 167, 120);
+        border-bottom: 2px solid rgb(27, 167, 120);
+      }
+      .logout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 80px;
+        cursor: pointer;
+      }
+      .filterbar {
+        width: 30%;
+        height: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        float: left;
+      }
+      .filterbar h2 {
+        font-size: 38px;
+      }
+      .filterbar #tag {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .filter {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .fitems {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      table {
+        width: 70%;
+        height: auto;
+        float: right;
+        position: relative;
+        top: 45px;
+        left: -80px;
+        gap: 0px;
+        border-spacing: 0px 5px;
+      }
+      th {
+        text-align: left;
+      }
+      td {
+        padding: 25px;
+        background-color: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <!--  creating navbar -->
+      <div class="logospace">
+        <!--  creating logo space -->
+        <div class="logo">
+          <!--  inserting logo -->
+          <img
+            src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png"
+            alt="logo"
+          />
+        </div>
+        <div class="lname">
+          <p>Kafene</p>
+          <!--  inserting name-->
+        </div>
+      </div>
+      <div class="navdiv">
+        <ul>
+          <li class="navitems" id="nav1"><a href="/orders.html">Orders</a></li>
+          <li class="navitems" id="nav2">
+            <a href="/products.html">Products</a>
+          </li>
+          <li class="navitems" id="nav3"><a href="/users.html">Users</a></li>
+        </ul>
+      </div>
+      <div class="logout" onclick="logout()">
+        <p>Logout</p>
+      </div>
+    </div>
+    <div class="filterbar">
+      <h2>Products</h2>
+      <p id="tag">Filters</p>
+      <p>Count:</p>
+      <div class="filter">
+        <div class="fitems">
+          <input type="checkbox" id="new" />
+          <p>Expired</p>
+        </div>
+        <div class="fitems">
+          <input type="checkbox" id="packed" />
+          <p>Low Stock</p>
+        </div>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Product Name</th>
+          <th>Product Brand</th>
+          <th>Expiry Date</th>
+          <pre><th>Unit Price</th></pre>
+          <th>Stock</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script src="/products.js"></script>
+  </body>
+</html>
